@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+
+/* =================== Font Import ======================== */
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf")
+        format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf")
+        format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-SemiBold.ttf")
+        format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf")
+        format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* =================== Basic Styles ======================== */
+
+*,
+*::before,
+*::after {
+    -webkit-user-drag: none;
+}
+
+html {
+    /* @apply text-[105%] lg:text-[inherit] xl:text-[100%]; */
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    @apply w-2 bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply w-0 bg-orange;
+}
+
+body {
+    @apply cursor-default overflow-x-hidden relative text-base font-poppins;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+bold,
+a {
+    @apply font-poppins;
+}
+
+p {
+    @apply font-poppins font-normal leading-[1.8em];
+}
+
+.row {
+    @apply w-row-sm lg:w-row max-w-[90rem] m-auto;
+}
+
+.btn {
+    @apply py-3 px-5 outline-none border-1-2rem border-solid rounded-md cursor-pointer transition-all duration-300 font-semibold text-sm;
+}
+
+.btn-primary {
+    @apply bg-orange border-orange text-white hover:bg-skyblue hover:border-skyblue;
+}
+
+.btn-primary:active {
+    @apply bg-transparent border-transparent;
+}
+
+.nav-link::after {
+    @apply content-[""] absolute w-0 h-[0.2rem] bg-orange left-0 -bottom-1 transition-all duration-300;
+}
+
+.nav-link-active {
+    @apply text-orange !important;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
+}
+
+@tailwind utilities;
