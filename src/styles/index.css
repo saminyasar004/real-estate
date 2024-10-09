@@ -139,4 +139,8 @@ p {
     @apply w-full;
 }
 
+.line {
+    @apply w-48 h-[0.2rem] bg-blue mt-2;
+}
+
 @tailwind utilities;

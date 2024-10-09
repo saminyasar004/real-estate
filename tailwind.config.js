@@ -16,6 +16,7 @@ module.exports = {
                 darkred: "#eb410d",
                 skyblue: "#38a9ff",
                 blue: "#04419d",
+                gray: "#999999",
             },
             backgroundImage: {
                 topHeaderGradiant:
